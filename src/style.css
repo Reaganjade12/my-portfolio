@@ -1,0 +1,58 @@
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap');
+@theme { --font-sans: 'Manrope', sans-serif; --font-serif: 'Instrument Serif', serif; --font-mono: 'DM Mono', monospace; }
+html { scroll-behavior: smooth; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@keyframes marquee-loop { to { transform: translateX(-25%); } }
+.hero-orbit canvas { opacity: .78; }
+
+#work article > p.text-xs,
+#work a > p.text-xs {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+#contact > div > div:last-child {
+  background: #10110e;
+  color: #f2f1eb;
+  margin-right: -1.5rem;
+  margin-bottom: -6rem;
+  margin-left: -1.5rem;
+  padding: 2rem 1.5rem 8rem;
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+
+@media (min-width: 768px) {
+  #contact > div > div:last-child {
+    margin-right: -10vw;
+    margin-bottom: -9rem;
+    margin-left: -10vw;
+    padding-right: 10vw;
+    padding-bottom: 11rem;
+    padding-left: 10vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  main > section:first-child {
+    min-height: calc(100vh - 4.75rem);
+  }
+
+  main > section:first-child > div:nth-child(2) {
+    justify-content: flex-start;
+    padding-top: clamp(6rem, 13vh, 9rem);
+    transform: none;
+  }
+
+  main > section:first-child > div:nth-child(3) figure {
+    top: clamp(6rem, 13vh, 9rem);
+    margin-top: 0;
+    transform: translateX(-50%);
+  }
+
+  main > section:first-child > div:nth-child(3) > div:last-child {
+    top: calc(clamp(6rem, 13vh, 9rem) + 23rem);
+    bottom: auto;
+  }
+}
